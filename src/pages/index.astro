@@ -1,11 +1,30 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import 	 "../styles/global.css";
+import Badge from '../components/Badge.astro';
+import { DevToolbarBadge } from 'astro/runtime/client/dev-toolbar/ui-library/badge.js';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+<main>
+	<Header />
+	<section class="w-full lg:w-[740px] mx-auto py-44">
+	<h1 class="text-white text-5xl font-bold">Hey! Mi nombre es Sergio</h1>
+	<span></span>
+	
+	<Badge>ACTUAL ESTUDIANTE</Badge>
+	<br> <br>
+
+	<h2>Estudiando en grado superior y aprendiendo programación 💻 
+		Java,CSS,TailWind,Linux,HTML,Java Script.
+	</h2>
+
+	<ul></ul>
+	</section>
+</main>
+
 </Layout>
+<nav></nav>

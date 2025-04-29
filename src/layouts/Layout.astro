@@ -1,5 +1,17 @@
+---
+import "@fontsource-variable/onest";
+import Header from '../components/Header.astro';
+
+
+---
+
+
+
+
+
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -8,15 +20,39 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+			
+	
+
+		</header>
 		<slot />
 	</body>
 </html>
 
 <style>
-	html,
+	:root {
+		color-scheme: light dark; /* Ayudara a trabajar con el color oscuro. Dado que en el body
+		tenemos un black. */
+	}
+
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		background-color: #050505;
+		display: flex;
+		justify-content: center;
+		min-height: 100vh;
+		margin: 0 auto;
+		
+	}
+	html {
+		font-family: "Onest Variable", sans-serif;
+	}
+
+	#foto_perfil {
+		border-radius: 100%;
+		width: 3rem;
+		height: 3rem;
+	}
+	nav {
+		display: flex;
+		gap: 1rem;
 	}
 </style>
