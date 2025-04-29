@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋 Mi nombre Sergio</h1>
 <h3 align="center">Soy un estudiante con muchas gracias de aprender y desarrollarme en este sector.</h3>
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Connect with me: sergio305david@gmail.com </h3>
 <p align="left">
 </p>
 
