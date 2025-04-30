@@ -9,19 +9,31 @@ import { DevToolbarBadge } from 'astro/runtime/client/dev-toolbar/ui-library/bad
 ---
 
 <Layout>
+	<section>
 <main>
 	<Header />
 	<section class="w-full lg:w-[740px] mx-auto py-44">
-	<h1 class="text-white text-5xl font-bold">Hey! Mi nombre es Sergio</h1>
-	<span></span>
-	<br>
-	<Badge>ACTUAL ESTUDIANTE</Badge>
-	<br> <br>
-	
-	<h2>Estudiando en grado superior y aprendiendo programación 💻 
-		Java,CSS,TailWind,Linux,HTML,Java Script.
-		Terminemos.
+		<h1 class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-2">
+			Hey! Mi nombre es Sergio
+		</h1>
+			<a
+			href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/"
+			target="_blank"
+			rel="noopener"
+			class="flex justify-center items-center"
+		>
+		<Badge>ACTUAL ESTUDIANTE</Badge> 
+		
+			</a>
+		<br>
+	<h2 class="text-2xl text-wrap"><span>Estudiando en grado superior. </span><span class="opacity-80"> Imagino que como ojeador de este porfolio estas interesado 
+		que he estado aprendiendo...Vivo en  </span>
+		<span class="text-yellow-200/100"> Madrid,España. </span>
+		<br>
+		 Actualmente aprendiendo <span class="text-orange-300/100"> Java,CSS,TailWind,Linux,HTML,Java Script y Python.</span>	
+		
 	</h2>
+
 
 	<ul></ul>
 	</section>
