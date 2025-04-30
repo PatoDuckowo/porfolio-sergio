@@ -6,15 +6,18 @@ import 	 "../styles/global.css";
 import Badge from '../components/Badge.astro';
 import Linkedl from '../components/Linkedl.astro';	
 import Github from '../components/Github.astro';
-
-
+import Pildoras from '../components/Pildoras.astro';
+import Email from '../components/Email.astro';
 
 ---
 
-<Layout>
+
+<Layout title="Porfolio de Sergio desarrollador multimedia y web!!!"
+		description="Si ha llegado aquí te saludo! La verdad es que soy nuevo seguramente acabe aprendiendo más, por el momento esto es parte de lo que estoy aprendiendo y me esta encantanndo.">
 	<section>
 <main>
 	<Header />
+	
 	<section class="w-full lg:w-[740px] mx-auto py-44">
 		<h1 class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-2">
 			Hey! Mi nombre es Sergio
@@ -27,6 +30,7 @@ import Github from '../components/Github.astro';
 		>
 		<Badge>ACTUAL ESTUDIANTE</Badge> 
 		
+		
 			</a>
 		<br>
 	<h2 class="text-2xl text-wrap"><span>Estudiando en grado superior. </span><span class="opacity-80"> Imagino que como ojeador de este porfolio estas interesado 
@@ -37,27 +41,36 @@ import Github from '../components/Github.astro';
 		
 	</h2>
 
-
-	<ul>
-			<li>
-		<a href="https://github.com/PatoDuckowo">
-			<Github />
-			<br>
-			
-
-
-		</a>
-			</li>
-			<li>
-				<a href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/">
-					<Linkedl
-					class="w-6-h-6"/>
-				
-				</a>
-					</li>
-
+	<br><br>
+	<ul class="flex flex-row gap-x-4 items-center justify-center">
+		<li>
+			<a href="https://github.com/PatoDuckowo">
+				<Pildoras>
+					<Github>  <Github /> 
+						
+				</Pildoras>
+				Github
+			</a>
+		</li>
+		<li>
+			<a href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/">
+				<Pildoras>
+					LinkedIn
+				<Linkedl>	<Linkedl />
+				</Pildoras>
+			</a>
+		</li>
+		<li>
+			<a>
+				<Pildoras>
+					<span class="text-sm px-2">sergio305david@gmail.com</span>
+					<Email></Email>
+				</Pildoras>
+			</a>
+		</li>
 	</ul>
 	</section>
+	
 </main>
 
 </Layout>
