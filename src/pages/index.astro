@@ -4,7 +4,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import 	 "../styles/global.css";
 import Badge from '../components/Badge.astro';
-import { DevToolbarBadge } from 'astro/runtime/client/dev-toolbar/ui-library/badge.js';
+import Linkedl from '../components/Linkedl.astro';	
+import Github from '../components/Github.astro';
+
+
 
 ---
 
@@ -35,7 +38,25 @@ import { DevToolbarBadge } from 'astro/runtime/client/dev-toolbar/ui-library/bad
 	</h2>
 
 
-	<ul></ul>
+	<ul>
+			<li>
+		<a href="https://github.com/PatoDuckowo">
+			<Github />
+			<br>
+			
+
+
+		</a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/">
+					<Linkedl
+					class="w-6-h-6"/>
+				
+				</a>
+					</li>
+
+	</ul>
 	</section>
 </main>
 
