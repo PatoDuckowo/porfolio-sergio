@@ -8,12 +8,14 @@ import Linkedl from '../components/Linkedl.astro';
 import Github from '../components/Github.astro';
 import Pildoras from '../components/Pildoras.astro';
 import Email from '../components/Email.astro';
-
+import Experiencia from '../components/Experiencia.astro';
 ---
 
 
-<Layout title="Porfolio de Sergio desarrollador multimedia y web!!!"
-		description="Si ha llegado aquí te saludo! La verdad es que soy nuevo seguramente acabe aprendiendo más, por el momento esto es parte de lo que estoy aprendiendo y me esta encantanndo.">
+<Layout 
+    title="Portfolio de Sergio - Desarrollador Multimedia y Web "
+    description="Si ha llegado aquí te saludo! La verdad es que soy nuevo seguramente acabe aprendiendo más, por el momento esto es parte de lo que estoy aprendiendo."
+>
 	<section>
 <main>
 	<Header />
@@ -46,7 +48,7 @@ import Email from '../components/Email.astro';
 		<li>
 			<a href="https://github.com/PatoDuckowo">
 				<Pildoras>
-					<Github>  <Github /> 
+					<Github class="size-8">  <Github /> 
 						
 				</Pildoras>
 				Github
@@ -56,7 +58,7 @@ import Email from '../components/Email.astro';
 			<a href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/">
 				<Pildoras>
 					LinkedIn
-				<Linkedl>	<Linkedl />
+				<Linkedl class="size-8">	<Linkedl />
 				</Pildoras>
 			</a>
 		</li>
@@ -64,7 +66,7 @@ import Email from '../components/Email.astro';
 			<a>
 				<Pildoras>
 					<span class="text-sm px-2">sergio305david@gmail.com</span>
-					<Email></Email>
+					<Email class="size-8"></Email>
 				</Pildoras>
 			</a>
 		</li>
@@ -72,6 +74,11 @@ import Email from '../components/Email.astro';
 	</section>
 	
 </main>
+<h1 class="text-white text-4xl font-bold  flex-row flex justify-center  gap-x-4 pb-2">Experiencia en el sector de IT</h1>
+<br>
+
+	<Experiencia>
+	</Experiencia>
 
 </Layout>
 <nav></nav>
