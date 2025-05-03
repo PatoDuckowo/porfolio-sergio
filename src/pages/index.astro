@@ -1,84 +1,105 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import 	 "../styles/global.css";
-import Badge from '../components/Badge.astro';
-import Linkedl from '../components/Linkedl.astro';	
-import Github from '../components/Github.astro';
-import Pildoras from '../components/Pildoras.astro';
-import Email from '../components/Email.astro';
-import Experiencia from '../components/Experiencia.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+import Badge from "../components/Badge.astro";
+import Linkedl from "../components/Icons/Linkedl.astro";
+import Github from "../components/Icons/Github.astro";
+import Pildoras from "../components/Pildoras.astro";
+import Email from "../components/Icons/Email.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Maletin from "../components/Icons/Maletin.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Code from "../components/Icons/Code.astro";
 ---
 
-
-<Layout 
-    title="Portfolio de Sergio - Desarrollador Multimedia y Web "
-    description="Si ha llegado aquí te saludo! La verdad es que soy nuevo seguramente acabe aprendiendo más, por el momento esto es parte de lo que estoy aprendiendo."
+<Layout
+	title="Portfolio de Sergio - Desarrollador Multimedia y Web "
+	description="Si ha llegado aquí te saludo! La verdad es que soy nuevo seguramente acabe aprendiendo más, por el momento esto es parte de lo que estoy aprendiendo."
 >
 	<section>
-<main>
-	<Header />
-	
-	<section class="w-full lg:w-[740px] mx-auto py-44">
-		<h1 class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-2">
-			Hey! Mi nombre es Sergio
+		
+		
+<main class="px-4">
+		<SectionContainer ></SectionContainer>
+			<Header />	
+
+			<section class="w-full lg:w-[740px] mx-auto py-44">
+				<h1
+					class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-row
+					gap-x-4 pb-10"
+				>
+					Hey! Mi nombre es Sergio
+				</h1>
+				<a
+					href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>ACTUAL ESTUDIANTE</Badge>
+				</a>
+				<br />
+				<h2 class="text-2xl text-wrap max-w-[500p]">
+					<span>Estudiando en grado superior. </span><span
+						class="opacity-80"
+					>
+						Imagino que como ojeador de este porfolio estas
+						interesado que he estado aprendiendo...Vivo en
+					</span>
+					<span class="text-yellow-200/100"> Madrid,España. </span>
+					<br />
+					Actualmente aprendiendo <span class="text-orange-300/100">
+						Java,CSS,TailWind,Linux,HTML,Java Script y Python.</span
+					>
+				</h2>
+
+				<br /><br />
+				<nav class="flex flex-row gap-x-4 items-center justify-center">
+					<a
+						href="https://github.com/PatoDuckowo"
+						target="_blank"
+						rel="noopener"
+					>
+						<Pildoras>
+							<Github class="size-8" />
+							Github
+						</Pildoras>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/"
+						target="_blank"
+						rel="noopener"
+					>
+						<Pildoras>
+							<Linkedl class="size-8" />
+							LinkedIn
+						</Pildoras>
+					</a>
+					<a href="mailto:sergio305david@gmail.com">
+						<Pildoras>
+							<Email class="size-8" />
+							<span class="text-sm px-2"
+								>sergio305david@gmail.com</span
+							>
+						</Pildoras>
+					</a>
+				</nav>
+			</section>
+		
+		<h1
+			id="experiencia"
+			class="text-white text-3xl font-bold flex-row flex justify-center items-center gap-x-4 pb-2">
+			<i class="fas fa-briefcase size-8"> </i> <Maletin></Maletin> Experiencia en el sector de IT
 		</h1>
-			<a
-			href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/"
-			target="_blank"
-			rel="noopener"
-			class="flex justify-center items-center"
-		>
-		<Badge>ACTUAL ESTUDIANTE</Badge> 
-		
-		
-			</a>
-		<br>
-	<h2 class="text-2xl text-wrap"><span>Estudiando en grado superior. </span><span class="opacity-80"> Imagino que como ojeador de este porfolio estas interesado 
-		que he estado aprendiendo...Vivo en  </span>
-		<span class="text-yellow-200/100"> Madrid,España. </span>
-		<br>
-		 Actualmente aprendiendo <span class="text-orange-300/100"> Java,CSS,TailWind,Linux,HTML,Java Script y Python.</span>	
-		
-	</h2>
+		<br />
 
-	<br><br>
-	<ul class="flex flex-row gap-x-4 items-center justify-center">
-		<li>
-			<a href="https://github.com/PatoDuckowo">
-				<Pildoras>
-					<Github class="size-8">  <Github /> 
-						
-				</Pildoras>
-				Github
-			</a>
-		</li>
-		<li>
-			<a href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/">
-				<Pildoras>
-					LinkedIn
-				<Linkedl class="size-8">	<Linkedl />
-				</Pildoras>
-			</a>
-		</li>
-		<li>
-			<a>
-				<Pildoras>
-					<span class="text-sm px-2">sergio305david@gmail.com</span>
-					<Email class="size-8"></Email>
-				</Pildoras>
-			</a>
-		</li>
-	</ul>
-	</section>
-	
-</main>
-<h1 class="text-white text-4xl font-bold  flex-row flex justify-center  gap-x-4 pb-2">Experiencia en el sector de IT</h1>
-<br>
+			<Experiencia>
+				<h2 class="text-white text-2xl font-bold flex justify-center mt-10">
+					
+				</h2>
+		</main>
+	</Layout>
 
-	<Experiencia>
-	</Experiencia>
 
-</Layout>
-<nav></nav>

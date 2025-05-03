@@ -22,7 +22,7 @@ const { title, description } = Astro.props;
 	</head>
 	<body>
 		<div 
-    class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.3),rgba(139,92,246,0.3),rgba(0,0,0,0))]">
+    class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.3),rgba(139,92,246,0.3),rgba(0,0,0,0))]">
 	</div>
 
 		</header>
@@ -44,9 +44,12 @@ const { title, description } = Astro.props;
 		min-height: 100vh;
 		margin: 0 auto;
 		
+
+		
 	}
 	html {
 		font-family: "Onest Variable", sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	#foto_perfil {
@@ -57,5 +60,13 @@ const { title, description } = Astro.props;
 	nav {
 		display: flex;
 		gap: 1rem;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		* {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
 	}
 </style>
