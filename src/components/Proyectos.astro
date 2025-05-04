@@ -1,0 +1,45 @@
+---
+const PRO = [
+  {
+    title: "Proyecto Pagina de viajes",
+    description: "Esto es un proyecto realizado por mi, user mediaquery para que se vea bien en dispositivos moviles y de escritorio. También aplique el uso JS para poder solicitar cookies y use Keyframes para las animaciones y así realizar un carrusel.",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/",
+    image: "public/proyects/proyecto1.png",
+    tags: []
+  },
+
+
+{
+    title: "En construcción",
+    description: "Actualizare el portafolio con más proyectos.",
+    link: "https://nuevo-proyecto.vercel.app/",
+    github: "https://github.com/usuario/nuevo-proyecto",
+    image: "public/proyects/construccion.png",
+    tags: []
+  }
+];
+---
+
+
+
+{
+  PRO.map(({title,description,tags,image}) => (
+  <article>
+    <h3 class="text-2x font-semibold text-yellow-200 mb-2 ">{title}</h3>
+    <p
+      class="text-lg mb-4 text-pretty"
+    >{description}</p>
+    <ul>
+      {tags.map(tag => (
+        <li>{tag}</li>
+      ))}
+    </ul>
+    <img 
+    class="rounded shadow-2xl shadow-white/5s"
+    src={image}
+    alt={`captura ${image}`} />
+
+  </article>
+))
+}

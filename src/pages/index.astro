@@ -12,6 +12,8 @@ import Experiencia from "../components/Experiencia.astro";
 import Maletin from "../components/Icons/Maletin.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Code from "../components/Icons/Code.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout
@@ -22,10 +24,11 @@ import Code from "../components/Icons/Code.astro";
 		
 		
 <main class="px-4">
-		<SectionContainer ></SectionContainer>
+		
 			<Header />	
 
-			<section class="w-full lg:w-[740px] mx-auto py-44">
+			<section class="w-full lg:w-[740px] mx-auto py-44"
+					 id="sobre-mi">
 				<h1
 					class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-row
 					gap-x-4 pb-10"
@@ -93,13 +96,19 @@ import Code from "../components/Icons/Code.astro";
 			class="text-white text-3xl font-bold flex-row flex justify-center items-center gap-x-4 pb-2">
 			<i class="fas fa-briefcase size-8"> </i> <Maletin></Maletin> Experiencia en el sector de IT
 		</h1>
-		<br />
+	<br >
 
-			<Experiencia>
-				<h2 class="text-white text-2xl font-bold flex justify-center mt-10">
-					
-				</h2>
+			<Experiencia></Experiencia>
+
+			<h2 class="text-white text-2xl font-bold flex justify-center mt-10 pl-0 pr-0"
+				id="proyectos">
+				<Code class="size-8 pr-2" /> PROYECTOS REALIZADOS
+			</h2>
+			<section class="w-full lg:w-[740px] mx-auto py-10">
+				<Proyectos class="text-white text-2xl font-bold flex justify-center"></Proyectos>
+			</section>
 		</main>
+		<Footer></Footer>
 	</Layout>
 
 
