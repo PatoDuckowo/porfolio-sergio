@@ -43,7 +43,7 @@ const { title, description } = Astro.props;
 		justify-content: center;
 		min-height: 100vh;
 		margin: 0 auto;
-		
+		overflow-x: hidden;
 
 		
 	}
@@ -51,6 +51,12 @@ const { title, description } = Astro.props;
 		font-family: "Onest Variable", sans-serif;
 		scroll-behavior: smooth;
 	}
+	html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
 
 	#foto_perfil {
 		border-radius: 100%;
@@ -61,6 +67,10 @@ const { title, description } = Astro.props;
 		display: flex;
 		gap: 1rem;
 	}
+	img {
+    max-width: 100%;
+    height: auto;
+}
 	@media (prefers-reduced-motion: reduce) {
 		* {
 			animation-duration: 0.01ms !important;
