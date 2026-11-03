@@ -1,6 +1,5 @@
 ---
 import "@fontsource-variable/onest";
-import Header from '../components/Header.astro';
 interface Props {
     title: string;
     description: string;
@@ -15,7 +14,7 @@ const { title, description } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -25,7 +24,6 @@ const { title, description } = Astro.props;
     class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.3),rgba(139,92,246,0.3),rgba(0,0,0,0))]">
 	</div>
 
-		</header>
 		<slot />
 	</body>
 </html>
@@ -40,7 +38,7 @@ const { title, description } = Astro.props;
 		
 		background-color: #050505;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		min-height: 100vh;
 		margin: 0 auto;
 		overflow-x: hidden;
