@@ -23,10 +23,10 @@ import Footer from "../components/Footer.astro";
 	<section>
 		
 		
-<main class="px-4 overflow-x-hidden">
+<main class="px-4 overflow-x-hidden text-white">
     <Header />
 
-    <section class="w-full lg:w-[740px] mx-auto py-50 px-4 mt-10" id="sobre-mi">
+    <section class="w-full lg:w-[740px] mx-auto py-10 px-4 mt-10" id="sobre-mi">
         <h1
             class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10 text-center"
         >
@@ -41,19 +41,38 @@ import Footer from "../components/Footer.astro";
             <Badge>ACTUAL ESTUDIANTE</Badge>
         </a>
         <br />
-		<h2 class="text-2xl text-wrap max-w-[500p]">
-			<span>Estudiando en grado superior. </span><span
-				class="opacity-80"
-			>
-				Imagino que como ojeador de este porfolio estas
-				interesado que he estado aprendiendo...Vivo en
-			</span>
-			<span class="text-yellow-200/100"> Madrid,España. </span>
-			<br />
-			Actualmente aprendiendo <span class="text-orange-300/100">
-				Java,CSS,TailWind,Linux,HTML,Java Script y Python.</span
-			>
-		</h2>
+		<div class="text-lg md:text-xl lg:text-2xl max-w-full md:max-w-[600px] mx-auto text-left md:text-justify leading-relaxed mt-6 md:mt-8 space-y-4">
+			<p><strong>Estudiando un grado superior.</strong></p>
+			<p class="opacity-80">
+				Imagino que como ojeador de este porfolio estás interesado en lo
+				que he estado aprendiendo... Vivo en
+				<span class="text-yellow-200/100">Madrid, España.</span>
+			</p>
+			<p>
+				Actualmente aprendiendo
+				<span class="text-orange-300/100">Java, CSS, TailWind, Linux, HTML, JavaScript y Python.</span>
+			</p>
+		</div>
+		<div class="flex flex-col md:flex-row justify-center items-center gap-y-4 md:gap-x-10 mt-10">
+			<Pildoras>
+				<a href="https://github.com/PatoDuckowo" target="_blank" rel="noopener noreferrer" class="flex items-center gap-x-2">
+					<Github class="size-12" />
+					<span>Github</span>
+				</a>
+			</Pildoras>
+			<Pildoras>
+				<a href="https://www.linkedin.com/in/sergio-david-diaz-incahuanaco-370585268/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-x-2">
+					<Linkedl class="size-12" />
+					<span>LinkedIn</span>
+				</a>
+			</Pildoras>
+			<Pildoras>
+				<a href="mailto:sergio305david@gmail.com" class="flex items-center gap-x-2">
+					<Email class="size-8" />
+					<span>sergio305david@gmail.com</span>
+				</a>
+			</Pildoras>
+		</div>
     </section>
 
     <h1
