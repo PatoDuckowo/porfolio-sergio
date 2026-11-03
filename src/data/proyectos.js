@@ -1,5 +1,26 @@
 export const PROYECTOS = [
   {
+    slug: "homelab",
+    titulo: "Homelab en Raspberry Pi",
+    etiqueta: "Proyecto personal · Sistemas",
+    resumen: "Servidor Linux propio con contenedores Docker, acceso remoto por VPN, DNS y copias de seguridad programadas.",
+    descripcion: "Administro mi propio servidor en casa sobre una Raspberry Pi 5 con Debian. Es donde practico sistemas con servicios reales y donde funcionan mis proyectos: lo instalo, lo mantengo y lo arreglo cuando falla.",
+    tags: ["Linux", "Debian", "Docker", "Tailscale", "SSH", "Pi-hole"],
+    puntos: [
+      "Servicios en contenedores Docker, con Docker Compose y gestión desde Portainer.",
+      "Acceso remoto por SSH y VPN con Tailscale, y fail2ban para proteger el acceso SSH.",
+      "Pi-hole como DNS de casa, con bloqueo de anuncios.",
+      "Administración con Cockpit, archivos compartidos con Samba y control del tráfico de red con vnStat.",
+      "Copias de seguridad automáticas: semanales del TFG y diarias de la base de datos del buscador de ofertas.",
+      "Aloja mis propios proyectos, como Frikicoments y el buscador de ofertas.",
+    ],
+    capturas: [
+      { src: "/proyects/homelab-esquema.svg", alt: "Esquema del homelab: Raspberry Pi 5 con Debian y los servicios de acceso y red, contenedores y administración", pie: "Esquema general del servidor." },
+      { src: "/proyects/homelab-panel.png", alt: "Panel de inicio del servidor con accesos a SearXNG, Portainer, Selenium y Pi-hole", pie: "Parte del panel de inicio con acceso a los servicios." },
+    ],
+    enlaces: [],
+  },
+  {
     slug: "frikicoments",
     titulo: "Frikicoments",
     etiqueta: "Trabajo de Fin de Grado · DAM",
