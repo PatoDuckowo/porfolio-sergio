@@ -1,17 +1,18 @@
 ---
 import { PROYECTOS } from "../data/proyectos.js";
 import Pildoras from "./Pildoras.astro";
+import { ruta } from "../utils/ruta.js";
 ---
 
 <div class="grid grid-cols-1 gap-8">
   {PROYECTOS.map(({ slug, titulo, etiqueta, resumen, tags, capturas }) => (
     <a
-      href={`/proyectos/${slug}/`}
+      href={ruta(`/proyectos/${slug}/`)}
       class="block rounded-lg border border-white/10 overflow-hidden bg-white/5 hover:border-yellow-200/60 transition-colors"
     >
       <img
         class="w-full aspect-video object-cover object-top"
-        src={capturas[0].src}
+        src={ruta(capturas[0].src)}
         alt={capturas[0].alt}
         loading="lazy"
       />

@@ -1,17 +1,21 @@
+---
+import { ruta } from "../utils/ruta.js";
+---
+
 <header class="flex justify-between items-center gap-x-4 py-5 w-full xl:w-[1120px] mx-auto">
     <img
     id="foto_perfil"
     class="shrink-0 rounded-full w-17 h-17 shadow-2xl shadow-white/5"
-   	src="/proyects/perfil.webp"
+   	src={ruta("/proyects/perfil.webp")}
     alt="Avatar de Sergio"/>
    
 
 <nav class="flex flex-row flex-wrap justify-end gap-x-4 gap-y-1 md:gap-x-10 opacity-80 whitespace-nowrap">
-    <a href="/#sobre-mi">Sobre mi</a>
-    <a href="/#experiencia">Experiencia</a>
-    <a href="/#competencias">Competencias</a>
-    <a href="/#proyectos">Proyectos</a>
-    <a href="/#formacion">Formación</a>
+    <a href={ruta("/#sobre-mi")}>Sobre mi</a>
+    <a href={ruta("/#experiencia")}>Experiencia</a>
+    <a href={ruta("/#competencias")}>Competencias</a>
+    <a href={ruta("/#proyectos")}>Proyectos</a>
+    <a href={ruta("/#formacion")}>Formación</a>
 
 
 </nav>

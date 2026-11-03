@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.astro";
 import Pildoras from "../../components/Pildoras.astro";
 import "../../styles/global.css";
 import { PROYECTOS } from "../../data/proyectos.js";
+import { ruta } from "../../utils/ruta.js";
 
 export function getStaticPaths() {
   return PROYECTOS.map((proyecto) => ({
@@ -22,7 +23,7 @@ const { titulo, etiqueta, resumen, descripcion, tags, puntos, capturas, enlaces,
     <Header />
 
     <article class="w-full lg:w-[740px] mx-auto py-10 px-4">
-      <a href="/#proyectos" class="text-orange-300 hover:underline">← Volver a proyectos</a>
+      <a href={ruta("/#proyectos")} class="text-orange-300 hover:underline">← Volver a proyectos</a>
 
       <p class="text-sm text-white/70 mt-8 mb-1">{etiqueta}</p>
       <h1 class="text-3xl md:text-4xl font-bold text-yellow-200 mb-4">{titulo}</h1>
@@ -41,7 +42,7 @@ const { titulo, etiqueta, resumen, descripcion, tags, puntos, capturas, enlaces,
       <div class="space-y-6 mb-8">
         {capturas.map(({ src, alt, pie }) => (
           <figure>
-            <img class="w-full rounded-lg border border-white/10" src={src} alt={alt} loading="lazy" />
+            <img class="w-full rounded-lg border border-white/10" src={ruta(src)} alt={alt} loading="lazy" />
             <figcaption class="text-sm text-white/70 mt-2">{pie}</figcaption>
           </figure>
         ))}
