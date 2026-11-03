@@ -15,6 +15,9 @@ export const PROYECTOS = [
     ],
     capturas: [
       { src: "/proyects/frikicoments-acceso.jpg", alt: "Pantalla de acceso de Frikicoments, con estética pixel art y formulario de inicio de sesión", pie: "Pantalla de acceso: el foro funciona solo por invitación." },
+      { src: "/proyects/frikicoments-portada.png", alt: "Portada de Frikicoments con el menú, el buscador de videojuegos y la sección de tendencias", pie: "Portada con el menú, el buscador de videojuegos y las tendencias." },
+      { src: "/proyects/frikicoments-juego.png", alt: "Ficha de The Legend of Zelda en Frikicoments, con su carátula y su resumen", pie: "Ficha de un juego con datos obtenidos de IGDB." },
+      { src: "/proyects/frikicoments-biblioteca.png", alt: "Biblioteca personal de Frikicoments con filtros y carátulas de juegos", pie: "Biblioteca personal con filtros y orden a mano." },
     ],
     enlaces: [{ texto: "Ver el código en GitHub", url: "https://github.com/PatoDuckowo/tfg-frikicoments" }],
   },
