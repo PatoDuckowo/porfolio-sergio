@@ -1,35 +1,63 @@
-<div class="flex justify-center items-center w-full max-w-3xl mx-auto">
-    <ol class="relative border-s border-white/20 dark:border-white/20">  
-        <li class="ms-4 hover:scale-105 transition-transform duration-200">
-            <div class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-white dark:border-white dark:bg-white/90"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-white/80 dark:text-white/80">-Actualmente...</time>
-            <h3 class="text-lg font-semibold text-yellow-200 dark:text-yellow-200">Estudiante DAM DUAL</h3>
-            <p class="text-base font-normal text-white dark:text-white">Aprendiendo todo tipo de leguajes como Java,JS...</p>
-            <br>
-        </li>               
-        <li class="mb-10 ms-4 hover:scale-105 transition-transform duration-200">
-            <div class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-white dark:border-white dark:bg-white/90"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-white/80 dark:text-white/80"> -Accude T.I Madrid (May 2022-Octubre 2024)</time>
-            <h3 class="text-lg font-semibold text-yellow-200 dark:text-yellow-200">TÉCNICO INFORMÁTICO</h3>
-            <ul class="list-disc pl-5 mb-4 text-base font-normal text-white dark:text-white">
-                <li>Resolución de incidencias y peticiones</li>
-                <li>Trabajando en KPMG desde Febrero 2023 hasta Octubre de 2024</li>
-                <li>Trabajando para empresas como El Corte Inglés, Disney y Santander</li>
-            </ul>
-        </li>
-        <li class="mb-10 ms-4 hover:scale-105 transition-transform duration-200">
-            <div class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-white dark:border-white dark:bg-white/90"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-white/80 dark:text-white/80">-Job & Talent S.L, Madrid (Feb.2022-Marz.2022)</time>
-            <h3 class="text-lg font-semibold text-yellow-200 dark:text-yellow-200">TÉCNICO INFORMÁTICO</h3>
-            <p class="text-base font-normal text-white dark:text-white">Encargado de realizar la migración en Liberbank por fusión.</p>
-        </li>
-        <li class="ms-4 hover:scale-105 transition-transform duration-200">
-            <div class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-white dark:border-white dark:bg-white/90"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-white/80 dark:text-white/80">-TÉCNICO EN TELECOMUNICACIONES (Sep.2020-Jun.2021)</time>
-            <h3 class="text-lg font-semibold text-yellow-200 dark:text-yellow-200">SmartLabs S.L Madrid </h3>
-            <p class="text-base font-normal text-white dark:text-white">Gestionando de empaquetado y reparaciones de equipos informáticos y periféricos.</p>
-        </li>
-       
+---
+const EXPERIENCIA = [
+  {
+    puesto: "Prácticas",
+    empresa: "Paralegal Consulting",
+    fecha: "jun. 2026 – oct. 2026",
+    tareas: [
+      "Instalación de aplicaciones y activación de licencias.",
+      "Creación y maquetado de imágenes de sistema para los equipos.",
+    ],
+  },
+  {
+    puesto: "Técnico CAU",
+    empresa: "Giesecke+Devrient",
+    fecha: "ago. 2026",
+    tareas: ["Soporte a usuarios en el CAU: gestión de incidencias y peticiones."],
+  },
+  {
+    puesto: "Técnico CAU",
+    empresa: "Accude T.I. · Madrid",
+    fecha: "may. 2022 – oct. 2024",
+    tareas: [
+      "Técnico CAU en KPMG (feb. 2023 – oct. 2024): soporte a usuarios de toda España por Teams, correo y teléfono.",
+      "Soporte remoto (AnyDesk, TeamViewer, NetOp) e in situ cuando era necesario.",
+      "Gestión de incidencias y peticiones en ServiceNow: registro, seguimiento, escalado y cierre.",
+      "Active Directory: reseteo de contraseñas y gestión de cuentas de usuario.",
+      "Microsoft 365: problemas de configuración y activación de licencias mediante Intune.",
+      "Maquetación y plataformado de equipos con imágenes corporativas de Windows.",
+      "Altas y bajas de empleados y becarios: cuentas, accesos y equipamiento.",
+      "Banco Santander: proyecto de integración de dispositivos móviles en Microsoft Intune.",
+      "El Corte Inglés, Disney, museos y administraciones públicas: cobertura de vacaciones y bajas.",
+    ],
+  },
+  {
+    puesto: "Técnico informático",
+    empresa: "Job & Talent · Madrid",
+    fecha: "feb. 2022 – mar. 2022",
+    tareas: ["Migración de equipos y puestos de usuario en Liberbank por la fusión de la entidad."],
+  },
+  {
+    puesto: "Técnico en telecomunicaciones",
+    empresa: "SmartLabs · Madrid",
+    fecha: "sep. 2020 – jun. 2021",
+    tareas: ["Diagnóstico y reparación de equipos informáticos y periféricos."],
+  },
+];
+---
 
-    </ol>
-    </div>
+<div class="w-full max-w-3xl mx-auto">
+  <ol class="relative border-s border-white/20">
+    {EXPERIENCIA.map(({ puesto, empresa, fecha, tareas }) => (
+      <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-white rounded-full mt-1.5 -start-1.5 border border-white"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-white/80">{fecha}</time>
+        <h3 class="text-lg font-semibold text-yellow-200">{puesto}</h3>
+        <p class="text-base font-medium text-white/90 mb-2">{empresa}</p>
+        <ul class="list-disc pl-5 text-base font-normal text-white space-y-1">
+          {tareas.map((tarea) => <li>{tarea}</li>)}
+        </ul>
+      </li>
+    ))}
+  </ol>
+</div>

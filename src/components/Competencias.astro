@@ -1,0 +1,23 @@
+---
+import Pildoras from "./Pildoras.astro";
+
+const COMPETENCIAS = [
+  { grupo: "Soporte", items: ["CAU / Helpdesk", "ServiceNow", "Gestión de incidencias", "Soporte remoto y presencial"] },
+  { grupo: "Sistemas operativos", items: ["Windows 10/11", "Linux", "Maquetación de equipos"] },
+  { grupo: "Microsoft", items: ["Active Directory", "Microsoft 365", "Intune"] },
+  { grupo: "Acceso remoto y redes", items: ["AnyDesk", "TeamViewer", "NetOp", "VPN (Tailscale)", "SSH"] },
+  { grupo: "Desarrollo", items: ["Python", "Java", "JavaScript", "SQL", "Git", "Docker"] },
+  { grupo: "Idiomas", items: ["Español nativo", "Inglés B1"] },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl mx-auto">
+  {COMPETENCIAS.map(({ grupo, items }) => (
+    <div>
+      <h3 class="text-lg font-semibold text-yellow-200 mb-3">{grupo}</h3>
+      <ul class="flex flex-wrap gap-2">
+        {items.map((item) => <li><Pildoras>{item}</Pildoras></li>)}
+      </ul>
+    </div>
+  ))}
+</div>
