@@ -2,6 +2,7 @@ services:
   porfolio:
     build: .
     container_name: porfolio-dev
+    restart: unless-stopped
     ports:
       - "4321:4321"
     volumes:
