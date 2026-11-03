@@ -1,45 +1,29 @@
 ---
-const PRO = [
-  {
-    title: "Proyecto Pagina de viajes",
-    description: "Esto es un proyecto realizado por mi, user mediaquery para que se vea bien en dispositivos moviles y de escritorio. También aplique el uso JS para poder solicitar cookies y use Keyframes para las animaciones y así realizar un carrusel.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/",
-    image: "/proyects/proyecto1.png",
-    tags: []
-  },
-
-
-{
-    title: "En construcción",
-    description: "Actualizare el portafolio con más proyectos.",
-    link: "https://nuevo-proyecto.vercel.app/",
-    github: "https://github.com/usuario/nuevo-proyecto",
-    image: "/proyects/construccion.png",
-    tags: []
-  }
-];
+import { PROYECTOS } from "../data/proyectos.js";
+import Pildoras from "./Pildoras.astro";
 ---
 
-
-
-{
-  PRO.map(({title,description,tags,image}) => (
-  <article>
-    <h3 class="text-2xl font-semibold text-yellow-200 mb-2 ">{title}</h3>
-    <p
-      class="text-lg mb-4 text-pretty"
-    >{description}</p>
-    <ul>
-      {tags.map(tag => (
-        <li>{tag}</li>
-      ))}
-    </ul>
-    <img 
-    class="rounded shadow-2xl shadow-white/5"
-    src={image}
-    alt={`Captura de ${title}`} />
-
-  </article>
-))
-}
+<div class="grid grid-cols-1 gap-8">
+  {PROYECTOS.map(({ slug, titulo, etiqueta, resumen, tags, capturas }) => (
+    <a
+      href={`/proyectos/${slug}/`}
+      class="block rounded-lg border border-white/10 overflow-hidden bg-white/5 hover:border-yellow-200/60 transition-colors"
+    >
+      <img
+        class="w-full aspect-video object-cover object-top"
+        src={capturas[0].src}
+        alt={capturas[0].alt}
+        loading="lazy"
+      />
+      <div class="p-5">
+        <p class="text-sm text-white/70 mb-1">{etiqueta}</p>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{titulo}</h3>
+        <p class="text-base text-pretty mb-4">{resumen}</p>
+        <ul class="flex flex-wrap gap-2 mb-4">
+          {tags.map((tag) => <li><Pildoras>{tag}</Pildoras></li>)}
+        </ul>
+        <span class="font-semibold text-orange-300">Ver proyecto →</span>
+      </div>
+    </a>
+  ))}
+</div>

@@ -1,0 +1,59 @@
+export const PROYECTOS = [
+  {
+    slug: "frikicoments",
+    titulo: "Frikicoments",
+    etiqueta: "Trabajo de Fin de Grado · DAM",
+    resumen: "Foro de videojuegos con reseñas, biblioteca personal y chat privado, desplegado con Docker.",
+    descripcion: "Mi proyecto final de DAM: un foro que recupera el estilo de los foros clásicos para hablar de videojuegos, publicar opiniones y seguir a otros miembros de la comunidad. Un único servidor Express sirve las páginas y una API JSON, sin frameworks en el navegador.",
+    tags: ["Node.js", "Express", "MySQL", "JavaScript", "Docker", "API de IGDB"],
+    puntos: [
+      "Cuentas por invitación, contraseñas guardadas como hashes bcrypt y sesión en cookie HttpOnly.",
+      "Reseñas, fichas de juegos con datos de IGDB, biblioteca personal y perfiles que se pueden seguir.",
+      "Chat privado entre personas que se siguen mutuamente, con mensajes cifrados en reposo con AES-256-GCM.",
+      "Límites de peticiones y bloqueo progresivo de los intentos de inicio de sesión fallidos.",
+      "Migraciones de base de datos automáticas al arrancar y pruebas automatizadas.",
+    ],
+    capturas: [
+      { src: "/proyects/frikicoments-acceso.jpg", alt: "Pantalla de acceso de Frikicoments, con estética pixel art y formulario de inicio de sesión", pie: "Pantalla de acceso: el foro funciona solo por invitación." },
+    ],
+    enlaces: [{ texto: "Ver el código en GitHub", url: "https://github.com/PatoDuckowo/tfg-frikicoments" }],
+  },
+  {
+    slug: "buscador-empleo",
+    titulo: "Buscador de ofertas y asistente de CV",
+    etiqueta: "Proyecto personal",
+    resumen: "Aplicación web que reúne ofertas de sistemas y soporte y las compara con mi CV, como haría un ATS.",
+    descripcion: "La hice para mi propia búsqueda de empleo. Reúne ofertas de sistemas y soporte, las guarda y calcula cuánto encaja cada una con mi CV. Funciona en Docker sobre mi Raspberry Pi y la uso desde el navegador de cualquier dispositivo de casa.",
+    tags: ["Python", "FastAPI", "Jinja2", "SQLite", "Docker", "pytest"],
+    puntos: [
+      "Porcentaje de compatibilidad con el CV para cada oferta, con las palabras clave que tengo y las que faltan.",
+      "Simulación de cómo leería el CV un ATS. Es una aproximación con reglas propias, no la nota de un ATS real.",
+      "Seguimiento de cada oferta por estados y con notas, y filtros por zona, estado y texto.",
+      "Búsquedas en segundo plano, copia de seguridad diaria y límite de espacio en disco.",
+      "Pruebas automatizadas con pytest.",
+    ],
+    capturas: [
+      { src: "/proyects/buscador-ofertas.png", alt: "Lista de ofertas de empleo con su porcentaje de compatibilidad y las palabras clave encontradas", pie: "Lista de ofertas ordenadas por compatibilidad con el CV." },
+      { src: "/proyects/buscador-compatibilidad.png", alt: "Ficha de una oferta con un 100 % de compatibilidad y las palabras clave que coinciden", pie: "Ficha de una oferta con el detalle de compatibilidad." },
+    ],
+    enlaces: [],
+    nota: "Es una herramienta de uso personal: no está publicada en internet y su código no es público.",
+  },
+  {
+    slug: "pagina-viajes",
+    titulo: "Página de viajes",
+    etiqueta: "Proyecto de formación",
+    resumen: "Web adaptada a móvil y escritorio, con aviso de cookies y carrusel animado.",
+    descripcion: "Página de viajes hecha por mí mientras aprendía desarrollo web.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    puntos: [
+      "Media queries para que se vea bien en móvil y escritorio.",
+      "JavaScript para el aviso de cookies.",
+      "Carrusel animado con keyframes.",
+    ],
+    capturas: [
+      { src: "/proyects/proyecto1.png", alt: "Captura de la página de viajes", pie: "Vista de la página." },
+    ],
+    enlaces: [],
+  },
+];
