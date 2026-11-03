@@ -1,0 +1,9 @@
+services:
+  porfolio:
+    build: .
+    container_name: porfolio-dev
+    ports:
+      - "4321:4321"
+    volumes:
+      - ./:/app
+      - /app/node_modules
